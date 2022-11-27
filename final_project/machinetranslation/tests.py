@@ -1,14 +1,15 @@
 import unittest
-from ibm_watson import LanguageTranslatorV3
+from translator import english_To_French, french_To_English
 
 class TestMyModule(unittest.TestCase):
 
-    def englishToFrench(self):
-        self.assertNotEqual(englishToFrench("Null"), "")
-        self.assertEqual(englishToFrench('Hello'), 'Bonjour')
+    def test_english_To_French(self):
+        self.assertNotEqual(english_To_French("Null"), "")
+        self.assertEqual(english_To_French('Hello'), 'Bonjour')
 
-    def frenchToEnglish(self):
-        self.assertNotEqual(frenchToEnglish("Null"), "")
-        self.assertEqual(frenchToEnglish('Bonjour'), 'Hello')
+    def test_french_To_English(self):
+        self.assertNotEqual(french_To_English("Null"), "")
+        self.assertEqual(french_To_English('Bonjour'), 'Hello')
 
-unittest.main()
+if __name__=='__main__':
+    unittest.main()
