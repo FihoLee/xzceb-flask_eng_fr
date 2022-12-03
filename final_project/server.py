@@ -1,6 +1,5 @@
 from machinetranslation import translator
 from flask import Flask, render_template, request
-from . import machinetranslation
 import json
 
 app = Flask("Web Translator")
